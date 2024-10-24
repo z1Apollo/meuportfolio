@@ -121,6 +121,11 @@ span {
 
 .img-cont {
     padding-left: 8rem;
+    padding-top: 3rem;
+}
+
+.img-cont img {
+    width: 500px;
 }
 
 @media screen and ( max-width: 768px ) {
@@ -173,5 +178,9 @@ span {
     .img-cont {
         padding-top: 10px;
         padding-left: 10px;
+    }
+
+    .img-cont img {
+        padding-top: 15px;
     }
 }
