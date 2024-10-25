@@ -132,18 +132,18 @@ span {
     header {
         padding: 0;
     }
+
+    header nav {
+        display: none;
+    }
     
     .home {
         padding-top: 0;
         flex-direction: column;
     }
 
-    .home-nav ul {
-        gap: 15px;
-    }
-
-    .list-nav a{
-        font-size: 20px;
+    .logo-home {
+        font-size: 50px;
     }
 
     .container {
@@ -151,7 +151,11 @@ span {
     }
 
     .info-cont {
-        padding-top: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 0px;
         padding-right: 5px;
         padding-left: 5px;
     }
@@ -166,6 +170,12 @@ span {
 
     .info-cont h2 {
         font-size: 18px;
+    }
+
+    .info-cont p {
+        text-align: justify;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     .icons-cont {
