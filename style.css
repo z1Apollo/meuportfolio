@@ -16,6 +16,7 @@ body {
     background-color: black;
     color: white;
     overflow-x: hidden; 
+    transition: 0.5s;
 }
 
 header {
@@ -28,6 +29,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+nav { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
 }
 
 .logo-home {
@@ -149,7 +157,7 @@ span {
     font-weight: 500;
     gap: 7rem;
     font-weight: 500px;
-    padding-left: 8rem;
+    padding-left: 15rem;
     padding-right: 8rem;
 }
 
@@ -169,7 +177,7 @@ span {
     font-weight: 500;
     gap: 7rem;
     font-weight: 500px;
-    padding-left: 8rem;
+    padding-left: 12rem;
     padding-right: 8rem;
 }
 
@@ -182,16 +190,80 @@ span {
     font-size: 2.5rem;
 }
 
+                                   /* botão de modo Dark e Light */
+
+.modo {
+    width: 70px;
+    height: 30px;
+    background-color: #6b6969;
+    position: relative;
+    cursor: pointer;
+    border-radius: 150px;
+}
+
+.modo .interruptor {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transform: scale(.8);
+    left: 0;
+    transition: 0.5s;
+}
+
+.modo.light {
+    background-color: #6b6969;
+}
+
+.modo.light .interruptor {
+    left: 40px;
+    background-color: white;
+    color: black;
+}
+
+body.light {
+    background-color: white;
+}
+
+body.light h1 {
+    color: black;
+}
+
+body.light h2 {
+    color: black;
+}
+
+body.light p {
+    color: black;
+}
+
+body.light .logo-home {
+    color: #b74b4b
+}
+
+body.light a {
+    color: black;
+}
+
 @media screen and ( max-width: 768px ) {
     header {
         padding: 0;
     }
 
-    header nav {
+    .modo {
         display: none;
     }
-    
+
+    .list-nav a {
+        font-size: 20px;
+    }
+
     .home {
+        padding-bottom: 10px;
         padding-top: 0;
         flex-direction: column;
     }
@@ -247,5 +319,73 @@ span {
     .img-cont img {
         padding-top: 15px;
         width: 400px;
+    }
+
+    .hab-cont {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        padding-right: 5px;
+        padding-left: 5px;
+        gap: 0px;
+    }
+
+    .hab-cont h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+    }
+
+    .hab-cont p {
+        text-align: justify;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .hab-cont img {
+        padding-top: 2rem;
+        width: 300px;
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+    .hab-info span {
+        padding-left: 7px;
+    }
+
+    .exp-cont {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        padding-right: 5px;
+        padding-left: 5px;
+        gap: 0px;
+    }
+
+    .exp-cont h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+    }
+
+    .exp-cont p {
+        text-align: justify;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .exp-cont img {
+        padding-top: 2rem;
+        width:280px;
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+    .exp-info span {
+        padding-left: 7px;
     }
 }
